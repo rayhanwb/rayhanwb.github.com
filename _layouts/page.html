@@ -2,10 +2,19 @@
 layout: default
 ---
 
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
-
-  <div class="post-content">{{ content }}</div>
-</article>
+<div class="relative py-16 bg-white overflow-hidden">
+  <div
+    class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full"
+  ></div>
+  <div class="relative px-4 sm:px-6 lg:px-8">
+    <div class="text-lg max-w-prose mx-auto">
+      <h1>
+        <span
+          class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >{{ page.title | escape }}</span
+        >
+      </h1>
+      <p class="mt-8 text-xl text-gray-500 leading-8">{{ content }}</p>
+    </div>
+  </div>
+</div>
